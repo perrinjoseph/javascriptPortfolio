@@ -844,4 +844,4 @@ const dogs = [
 //      console.log(new Date('December 23,2015'));
 }
 
-
+/* ------------------------------- SOMETHINGSZ ------------------------------ */
