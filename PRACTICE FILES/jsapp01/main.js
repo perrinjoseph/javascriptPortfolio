@@ -838,8 +838,10 @@ const dogs = [
 }
 
 //✅  Dates
-// {
+ {
 //      const now = new Date();
 //      console.log(now);
 //      console.log(new Date('December 23,2015'));
 }
+
+
