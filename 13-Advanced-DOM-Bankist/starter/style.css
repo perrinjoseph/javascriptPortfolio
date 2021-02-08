@@ -1,5 +1,7 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
+/* ------------- variables in css in under the document element ------------- */
+
 :root {
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
