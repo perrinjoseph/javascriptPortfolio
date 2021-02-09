@@ -165,8 +165,10 @@ document.querySelector('.nav__links').addEventListener('click',function(e)
   {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({behavior:'smooth'});
+    
   }
 });
+
 
 
 
@@ -233,4 +235,24 @@ console.log(document.querySelector('.nav__logo').dataset.versionNumber);
 // document.querySelector('.nav').addEventListener('click',function(e){
 //   this.style.backgroundColor= randomColor();
 // });
+
+
+/* ----------------------------- DOM TRAVERSING ----------------------------- */
+// DOM TRAVERSING IS MOVING ACROSS THE DOM TREE FROM CHILD TO SIBLINGS OR PASRENT TO SIBLINGS AND HOW EVER YOU WANT TO TRAVERSE IN THE DOM TREE.
+
+const h1 = document.querySelector('h1');
+const allLinks = document.querySelectorAll('.nav__link');
+console.log(h1);
+console.log(h1.parentElement);
+console.log(h1.children);
+h1.closest('.header').style.background ='orange';
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+//cannot use forEach on a html collection. You can only use it on interables. 
+//traverse to find all the childeren class of a far away parent class called header.
+console.log(h1.closest('.header').children);
+// [...h1.closest('.header').children].forEach((el)=>el.style.transform = 'scale(0.5)')
+// console.log(allLinks);
+
+
 
