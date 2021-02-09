@@ -25,7 +25,7 @@ console.log(pj instanceof Person);
 
 //PROTPTYPES 
 // the objects that are created with the constructor function have access to the methods that are declared on the prototype of that cunstructor function. In java it was the class can access the object instances have access to all the methods o the class. In JavaScript it is the the object that is created ussing the constructor function has access to the methods that are created in the prototype of that CONSTUCTOR FUNCTION.
-
+ 
 Person.prototype.calcAge = function()
 {
     console.log(2037-this.birthyear);
