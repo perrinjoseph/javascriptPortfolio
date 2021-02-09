@@ -33,3 +33,40 @@ Person.prototype.calcAge = function()
 
 johanas.calcAge();
 
+
+/* --------------------------------- CLASSES -------------------------------- */
+//WE ARE GOING TO BE USEING CLASSES NOW. CLASSES ARE BASICALLY ANOTHER TYPE OF SPECIAL FUNCTION.
+console.log("APERSONCL")
+class PersonCl {
+
+    constructor(fName,lName){
+        this.fName = this.fName;
+        this.lName = lName;
+    }
+
+    greet()
+    {
+        console.log(`Welcome Mr./Ms. ${this.fName}.`);
+    }
+    get fName()
+    {
+        console.log(this.fName);
+    }
+
+    set fName(aName)
+    {
+        if(aName.includes(' '))
+        {
+            console.log(aName);
+            this.fName = aName;
+            console.log(`${this.fName}`)
+        }
+        else
+        {
+            console.log("the full namme is not real");
+        }
+    }
+
+}
+
+const aPersonCl  = new PersonCl("Perrin","Joseph");
