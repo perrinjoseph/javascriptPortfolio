@@ -846,35 +846,166 @@ const dogs = [
 
 //✅ COADING challenge1  for OOP
 {
-    const Car = function(make,speed)
-    {
-        this.make = make;
-        this.speed =speed;
-    }
+    // const Car = function(make,speed)
+    // {
+    //     this.make = make;
+    //     this.speed =speed;
+    // }
 
-    Car.prototype.accelerate = function()
-    {
-        this.speed+= 10;
-        console.log(`${this.make} is Going at ${this.speed} km/hr after accelaration`);
-    }
+    // Car.prototype.accelerate = function()
+    // {
+    //     this.speed+= 10;
+    //     console.log(`${this.make} is Going at ${this.speed} km/hr after accelaration`);
+    // }
 
-    Car.prototype.brake = function()
-    {
-        this.speed-=5;
-        console.log(`${this.make} is going at ${this.speed} km/hr after brake`);
-    }
+    // Car.prototype.brake = function()
+    // {
+    //     this.speed-=5;
+    //     console.log(`${this.make} is going at ${this.speed} km/hr after brake`);
+    // }
 
-    const car1 = new Car('BMW',120)
-    const car2 = new Car('Mercedes',95);
+    // const car1 = new Car('BMW',120)
+    // const car2 = new Car('Mercedes',95);
 
-    car1.accelerate();
-    car1.brake();
+    // car1.accelerate();
+    // car1.brake();
 
-    car2.accelerate();
-    car2.brake();
+    // car2.accelerate();
+    // car2.brake();
 
 }
 
+//✅ COADING challenge2  for OOP CLASSES!!!! IMPORTANT
+{
+    // class Car {
 
+    //     constructor(make,speed)
+    //     {
+    //         // this.make = Car.prototype.make(this.make);
+    //         this.speed = speed;
+    //     }
 
+    //     accelerate()
+    //     {
+    //         this.speed += 10;
+    //         console.log(` is going ${this.speed} now, after accelerations`);
+    //     }
 
+    //     brake()
+    //     {
+    //         this.speed -= 50;
+    //         console.log(`is going ${this.speed} now, after breaking`);
+       
+    //     }
+
+    //     get speedUs()
+    //     {
+    //         console.log(`The Speed is ${this.speed / 1.6}`);
+    //     }
+       
+    //     set speedUs(speed)
+    //     {
+    //         this.speed = speed *1.6;
+    //     }
+        
+
+    // }
+
+    // const aCar = new Car("BMW", 120);
+    // console.log(aCar);
+    // aCar.speedUs;
+    // aCar.brake();
+    // //the reason why we do not call the getter and setter with the '()' is because they are properties not methods but this only the case with ES6 Classes. When you use regular prototyping with Car.prototype.something then while caloing it you will have to say the object name . and put the method so something like this. aCar.something();.
+    // //the brake and accleration method will have to called with the () thing
+    // aCar.speedUs=50
+    // console.log(aCar);
+
+} 
+
+//✅ REAL INHERITANCE WHERE CLASSES PROTYPE FROM OTHER CLASSES. 
+{
+    // const Person = function (firstName, birthYear)
+    // {
+    //     this.firstName =firstName;
+    //     this.birthYearYear = birthYear;
+    // }
+    // Person.prototype.calAge = function()
+    // {
+    //     console.log(2037 - this.birthYear);
+    // }
+
+    // const Student = function(firstName,birthYear,course)
+    // {
+    //     Person.call(this,firstName,birthYear);
+    //     this.course=course;
+    // }
+    // Student.prototype = Object.create(Person,prototype);
+    // Student.prototype.constructor = Student;
+ 
+    // Student.prototype.introduce = function()
+    // {
+    //     console.log(`My name is ${this.firstName} and I study ${this.course}`);
+    // }
+
+    // const mike = new Student('Mike',2020,"Computer Science");
+    // console.log(mike);
+    // mike.introduce(); 
+}
+
+//✅ CODING CHALLENGE NUMBER 3
+{
+    const Car = function(make,speed)
+    {
+        this.make = make;
+        this.speed = speed;
+    }
+    Car.prototype.accelerate = function()
+    {
+        this.speed +=20;
+        console.log(`the speed is increased to ${this.speed}`);
+    }
+    Car.prototype.brake = function()
+    {
+        this.speed -+20;
+        console.log(`the speed is increased to ${this.speed}`);
+        
+    }
+    
+    const Ev = function(make,speed,charge)
+    {
+        //call is basically to call a method of an object or constructor and sets the this keyword o point to the current object.
+        Car.call(this,make,speed);
+        this.batteryCharge = charge;
+    }
+    Ev.prototype = Object.create(Car.prototype);
+    
+    Ev.prototype.chareBattery = function(chargeTo)
+    {
+        this.batteryCharge = chargeTo;
+        console.log(`the battery is now charged to ${charge}%`);
+        
+    }
+    Ev.prototype.accelerate= function()
+    {
+        this.speed +=20;
+        this.batteryCharge -=1;
+        console.log(`the charge is reduced to ${this.batteryCharge}% and the speed is increased to ${this.speed}`);
+    }
+    
+    const aCar = new Car('Ferrari',200)
+    const benz = new Ev('BMW',120,60);
+    aCar.accelerate();
+    benz.accelerate();
+    
+    
+}
+
+//✅ ES6 INHERITANCE
+{
+    
+}
+
+//✅ CODING CHALLENGE NUMBER 3
+{
+    
+}
