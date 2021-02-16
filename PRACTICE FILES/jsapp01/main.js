@@ -954,48 +954,48 @@ const dogs = [
 
 //✅ CODING CHALLENGE NUMBER 3
 {
-    const Car = function(make,speed)
-    {
-        this.make = make;
-        this.speed = speed;
-    }
-    Car.prototype.accelerate = function()
-    {
-        this.speed +=20;
-        console.log(`the speed is increased to ${this.speed}`);
-    }
-    Car.prototype.brake = function()
-    {
-        this.speed -+20;
-        console.log(`the speed is increased to ${this.speed}`);
+    // const Car = function(make,speed)
+    // {
+    //     this.make = make;
+    //     this.speed = speed;
+    // }
+    // Car.prototype.accelerate = function()
+    // {
+    //     this.speed +=20;
+    //     console.log(`the speed is increased to ${this.speed}`);
+    // }
+    // Car.prototype.brake = function()
+    // {
+    //     this.speed -+20;
+    //     console.log(`the speed is increased to ${this.speed}`);
         
-    }
+    // }
     
-    const Ev = function(make,speed,charge)
-    {
-        //call is basically to call a method of an object or constructor and sets the this keyword o point to the current object.
-        Car.call(this,make,speed);
-        this.batteryCharge = charge;
-    }
-    Ev.prototype = Object.create(Car.prototype);
+    // const Ev = function(make,speed,charge)
+    // {
+    //     //call is basically to call a method of an object or constructor and sets the this keyword o point to the current object.
+    //     Car.call(this,make,speed);
+    //     this.batteryCharge = charge;
+    // }
+    // Ev.prototype = Object.create(Car.prototype);
     
-    Ev.prototype.chareBattery = function(chargeTo)
-    {
-        this.batteryCharge = chargeTo;
-        console.log(`the battery is now charged to ${charge}%`);
+    // Ev.prototype.chareBattery = function(chargeTo)
+    // {
+    //     this.batteryCharge = chargeTo;
+    //     console.log(`the battery is now charged to ${charge}%`);
         
-    }
-    Ev.prototype.accelerate= function()
-    {
-        this.speed +=20;
-        this.batteryCharge -=1;
-        console.log(`the charge is reduced to ${this.batteryCharge}% and the speed is increased to ${this.speed}`);
-    }
+    // }
+    // Ev.prototype.accelerate= function()
+    // {
+    //     this.speed +=20;
+    //     this.batteryCharge -=1;
+    //     console.log(`the charge is reduced to ${this.batteryCharge}% and the speed is increased to ${this.speed}`);
+    // }
     
-    const aCar = new Car('Ferrari',200)
-    const benz = new Ev('BMW',120,60);
-    aCar.accelerate();
-    benz.accelerate();
+    // const aCar = new Car('Ferrari',200)
+    // const benz = new Ev('BMW',120,60);
+    // aCar.accelerate();
+    // benz.accelerate();
     
     
 }
@@ -1007,5 +1007,11 @@ const dogs = [
 
 //✅ CODING CHALLENGE NUMBER 3
 {
+    
+}
+
+//✅ CODING CHALLENGE NUMBER 1 async
+{
+
     
 }
